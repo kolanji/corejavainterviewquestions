@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.java.example</groupId>
+    <artifactId>jdk_own_practice</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>application-service</module>
+        <module>common</module>
+        <module>domain</module>
+        <module>primary-adaptor</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <spring-boot-maven-plugin.version>3.0.3</spring-boot-maven-plugin.version>
+        <spring-kafka.version>3.0.3</spring-kafka.version>
+        <kafka-stream.version>2.8.0</kafka-stream.version>
+        <kafka-client.version>3.0.3</kafka-client.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <distuptor.version>3.4.4</distuptor.version>
+        <strati-af-tunr-utils-client-api.version>2.0.22</strati-af-tunr-utils-client-api.version>
+        <micrometer.versiuon>1.10.4</micrometer.versiuon>
+        <apache-commons.version>3.12.0</apache-commons.version>
+        <resilence4j-reactor.version>2.0.2</resilence4j-reactor.version>
+        <resilence4j-spring-boot2.version>2.0.2</resilence4j-spring-boot2.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-bom</artifactId>
+                <version>2020.0.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <scope>import</scope>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j.version}</version>
+                <type>pom</type>
+
+            </dependency>
+
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <scope>import</scope>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j.version}</version>
+                <type>pom</type>
+
+            </dependency>
+
+
+
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.4.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.projectreactor.addons</groupId>
+            <artifactId>reactor-adapter</artifactId>
+            <version>3.4.6</version>
+        </dependency>
+        <!-- test data -->
+
+
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <version>3.5.0</version>
+            <scope>test</scope>
+
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>4.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>4.2.0</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+
+
+
+
+
+        </plugins>
+    </build>
+
+
+</project>
