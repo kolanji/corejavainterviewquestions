@@ -1,4 +1,4 @@
-package Java_design_pattern.creationalDesignPattern.Builder;
+package org.javadesignpattern.creationalDesignPattern.Builder;
 
 public class Home {
 
