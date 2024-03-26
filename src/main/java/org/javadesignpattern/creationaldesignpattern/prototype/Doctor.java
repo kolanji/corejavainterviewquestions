@@ -1,4 +1,4 @@
-package org.javadesignpattern.creationalDesignPattern.prototype;
+package org.javadesignpattern.creationaldesignpattern.prototype;
 
 public class Doctor extends Profession {
 

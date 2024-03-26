@@ -1,4 +1,4 @@
-package org.javadesignpattern.creationalDesignPattern.Builder;
+package org.javadesignpattern.creationaldesignpattern.builder;
 
 public interface Builder {
 

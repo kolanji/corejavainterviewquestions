@@ -1,4 +1,4 @@
-package org.javadesignpattern.creationalDesignPattern.prototype;
+package org.javadesignpattern.creationaldesignpattern.prototype;
 
 public abstract class Profession implements Cloneable {
     public int id;

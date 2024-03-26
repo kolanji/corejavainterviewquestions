@@ -1,23 +1,23 @@
-package org.javadesignpattern.creationalDesignPattern.Builder;
+package org.javadesignpattern.creationaldesignpattern.builder;
 
-public class FloorResistenceBuilder implements Builder {
+public class EarthQuakeResistantBuilde implements Builder {
+
     private Home home = new Home();
 
     @Override
     public void buildFloor() {
-        this.home.floor = "10 feet above graound floor";
+        this.home.floor = "woodern";
 
     }
 
     @Override
     public void buildWalls() {
-
-        this.home.walls = "water resistent walls";
+        this.home.walls = "walls";
     }
 
     @Override
     public void buildTerrace() {
-        this.home.terace = "water leake";
+        this.home.terace = "terace";
     }
 
     @Override

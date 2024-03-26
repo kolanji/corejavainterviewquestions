@@ -1,4 +1,4 @@
-package org.javadesignpattern.creationalDesignPattern.FactoryDesign;
+package org.javadesignpattern.creationaldesignpattern.factorydesign;
 
 public interface FactoryMethod_Currency {
 	
