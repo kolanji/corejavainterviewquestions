@@ -20,7 +20,7 @@ public class StringCompression {
 
 	public static void main(String[] args) {
 		String st1 = compress("kollaann");
-		System.out.println("count" + st1);
+		System.out.println("count>>>>" + st1);
 	}
 
 }
