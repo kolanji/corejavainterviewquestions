@@ -1,6 +1,6 @@
 package org.leetCode;
 
-public class Validpolindrome2 {
+public class ValidPalindrome2 {
     public boolean validPalindrome(String s) {
         int left = 0;
         int right = s.length() - 1;
@@ -25,6 +25,7 @@ public class Validpolindrome2 {
         return true;
 
     }
+
     private boolean isPalindrome(String s, int start, int end) {
         while (start < end) {
             if (s.charAt(start) != s.charAt(end)) {
@@ -37,6 +38,8 @@ public class Validpolindrome2 {
     }
 
     public static void main(String[] args) {
-
+        String st = "aba";
+        //s = "abca"
+        //s = "abc"
     }
 }

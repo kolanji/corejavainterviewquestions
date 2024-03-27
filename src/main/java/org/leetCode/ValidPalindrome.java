@@ -1,6 +1,6 @@
 package org.leetCode;
 
-public class Validpolindrome {
+public class ValidPalindrome {
     public boolean isPalindrome(String s) {
         StringBuilder str = new StringBuilder();
         int length = s.length();
@@ -19,6 +19,8 @@ public class Validpolindrome {
     }
 
     public static void main(String[] args) {
-
+        String st = "A man, a plan, a canal: Panama";
+        //s = "race a car"
+        //s = " "
     }
 }
