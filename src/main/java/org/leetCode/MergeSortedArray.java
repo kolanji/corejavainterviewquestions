@@ -1,6 +1,7 @@
 package org.leetCode;
 
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 /**
  * Example 1:
@@ -29,6 +30,7 @@ public class MergeSortedArray {
         for (int j = 0, i = m; j < n; j++) {
             nums1[i] = nums2[j];
             i++;
+            //Logger log = new Logger(MergeSortedArray.class);
             System.out.println("array" + nums1);
         }
         Arrays.sort(nums1);
