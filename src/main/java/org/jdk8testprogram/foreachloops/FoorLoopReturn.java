@@ -1,6 +1,6 @@
 package org.jdk8testprogram.foreachloops;
 
-public class foorloopreturn {
+public class FoorLoopReturn {
     public static String frechlop(String[] geek)
     {
         int count = 0;

@@ -6,8 +6,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class EkartDataBase {
-
-
     public static List<Customer> getAll() {
         return Stream.of(
                 new Customer(101, "john", "john@gmail.com", Arrays.asList("397937955", "21654725")),

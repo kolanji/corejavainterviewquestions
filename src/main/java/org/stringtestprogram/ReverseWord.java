@@ -23,7 +23,6 @@ public class ReverseWord {
         }
         System.out.println("Using string builder ::" + stringBuilder.toString());
 
-
         //Jdk8
         String String = Stream.of(inputStr)
                 .map(inputValues -> new StringBuilder(inputValues)

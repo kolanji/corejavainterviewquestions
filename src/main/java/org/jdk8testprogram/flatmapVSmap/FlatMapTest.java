@@ -10,7 +10,6 @@ public static void main(String[] args) {
 	li.add("core java");
 	li.add("j2ee");
 	li.add("val");
-	
 	Stream<String>ll = li.stream().flatMap((String x) -> {
 		String [] a = x.split("");
 	return Arrays.asList(a).stream();
@@ -20,10 +19,6 @@ public static void main(String[] args) {
 	
 	ll.forEach((x) ->{System.out.println(x+""+x.length());
 	});
-	
-	
-	
-	
 }
 	
 }

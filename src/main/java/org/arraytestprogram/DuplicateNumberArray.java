@@ -11,14 +11,14 @@ public class DuplicateNumberArray {
 			System.out.println("After removing duplicates   : " + Arrays.toString(removeDuplicates(input)));
 		}
 	}
-	public static int[] removeDuplicates(int[] numbersWithDuplicates) {
+	public static int[] removeDuplicates(int[] inputArray) {
 		// Sorting array to bring duplicates together
-		Arrays.sort(numbersWithDuplicates);
-		int[] result = new int[numbersWithDuplicates.length];
-		int previous = numbersWithDuplicates[0];
+		Arrays.sort(inputArray);
+		int[] result = new int[inputArray.length];
+		int previous = inputArray[0];
 		result[0] = previous;
-		for (int i = 1; i < numbersWithDuplicates.length; i++) {
-			int ch = numbersWithDuplicates[i];
+		for (int i = 1; i < inputArray.length; i++) {
+			int ch = inputArray[i];
 			if (previous != ch) {
 				result[i] = ch;
 			}

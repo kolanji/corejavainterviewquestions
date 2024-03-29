@@ -6,9 +6,7 @@ import java.util.Arrays;
  * iven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
  * <p>
  * Note that you must do this in-place without making a copy of the array.
- * <p>
- * <p>
- * <p>
+
  * Example 1:
  * <p>
  * Input: nums = [0,1,0,3,12]
@@ -19,24 +17,25 @@ import java.util.Arrays;
  * Output: [0]
  */
 public class MoveZeroes {
-    public static void moveZeroes(int[] nums) {
-        int n = nums.length;
+    public static void moveZeroes(int[] intArray) {
+        int n = intArray.length;
         int i = 0;
         for (int j = 0; j < n; j++) {
-            if (nums[j] != 0) {
-                nums[i] = nums[j];
+            if (intArray[j] != 0) {
+                intArray[i] = intArray[j];
                 i++;
             }
         }
         for (int k = i; k < n; k++) {
-            nums[k] = 0;
+            intArray[k] = 0;
+
         }
-        Arrays.stream(nums).forEach(aa-> System.out.println(aa));
+        Arrays.stream(intArray).forEach(array-> System.out.println("Array values"+array));
 
     }
 
     public static void main(String[] args) {
-       int [] nums = {0,1,0,3,12};
-        MoveZeroes.moveZeroes(nums);
+       int [] intArray = {0,1,0,3,12};
+        MoveZeroes.moveZeroes(intArray);
     }
 }
