@@ -12,8 +12,10 @@ public class SplitStringByComma {
 		String languages = "Java,JavaScript,C++,Python,Ruby,Scala"; 
 		// splitting String by comma, it will return array 
 		String[] array = languages.split(",");
+
 		// if you want, you can convert array to ArraList as shown below 
-		ArrayList<String> list = new ArrayList<>(Arrays.asList(array)); 
+		ArrayList<String> list = new ArrayList<>(Arrays.asList(array));
+
 		// let's print input and output 
 		System.out.println("comma separated String: " + languages); 
 		System.out.println("array of String: " + Arrays.toString(array)); 

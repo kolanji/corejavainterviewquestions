@@ -14,6 +14,7 @@ public class MinSalaryAndMaxSalary {
                 .stream()
                 .filter(salary -> salary.getSalary() > 50000)
                 .collect(Collectors.toList());
+        System.out.println("minimumSalary"+minimumSalary);
 
         Optional<Employee> maxSalary = Database.getEmployeeDetails()
                 .stream()

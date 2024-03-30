@@ -15,7 +15,7 @@ public class FluxAndMonoOperator {
         Flux.fromArray(new String[]{"kolanji", "Rathna", "velMurugan", "Naidu"})
                 .map(String::toUpperCase)
                 .subscribe(System.out::println);
-        System.out.println();
+
         //Using filter
         Flux.fromArray(new String[]{"kolanji", "Rathna", "velMurugan", "Naidu"})
                 .filter(name -> name.length() > 5)

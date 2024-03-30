@@ -3,22 +3,23 @@ package org.stringtestprogram;
 public class StringPalindrome {
 
     public static void main(String[] args) {
-        String inputStr = "101";
+        String inputStr = "hi";
         String result = reverse(inputStr);
 
         if (inputStr.equals(result)) {
-            System.out.println("Yes "+inputStr+" Palindrome  : " + result);
+            System.out.println("Yes "+inputStr+" is a Palindrome  : " + result);
         } else {
-            System.out.println(inputStr + " is not a palindrome  : " + result);
+            System.out.println("NO "+inputStr + " is not a palindrome  : " + result);
         }
     }
 
     public static String reverse(String source) {
         String reverse = "";
+        int length = source.length();
         if (source == null || source.isEmpty()) {
             return source;
         }
-        for (int i = source.length() - 1; i >= 0; i--) {
+        for (int i = length - 1; i >= 0; i--) {
             //System.out.println("reverse: " + reverse);
             reverse = reverse + source.charAt(i);
         }

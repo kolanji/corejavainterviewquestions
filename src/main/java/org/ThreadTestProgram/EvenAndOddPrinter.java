@@ -10,7 +10,6 @@ public class EvenAndOddPrinter {
     private static IntPredicate evenCondition = e -> e % 2 == 0;
     private static IntPredicate oddCondition = e -> e % 2 != 0;
 
-
     public static void main(String[] args) throws InterruptedException {
         CompletableFuture.runAsync(() -> EvenAndOddPrinter.printResults(oddCondition));
         CompletableFuture.runAsync(() -> EvenAndOddPrinter.printResults(evenCondition));
@@ -22,8 +21,6 @@ public class EvenAndOddPrinter {
                 .filter(condition)
                 .forEach(EvenAndOddPrinter::execute);
     }
-
-
     public static void execute(int i) {
         synchronized (object) {
             try {

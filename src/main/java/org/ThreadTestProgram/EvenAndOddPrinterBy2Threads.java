@@ -36,7 +36,7 @@ public class EvenAndOddPrinterBy2Threads implements Runnable {
     }
 
     public static void main(String[] args) {
-        Object lock=new Object();
+        Object lock= new Object();
         Runnable r1=new EvenAndOddPrinterBy2Threads(lock);
         Runnable r2=new EvenAndOddPrinterBy2Threads(lock);
         new Thread(r1, "even").start();

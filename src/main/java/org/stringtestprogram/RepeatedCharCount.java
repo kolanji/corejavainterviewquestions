@@ -7,14 +7,14 @@ import java.util.Set;
 public class RepeatedCharCount {
 
 	public static void main(String[] args) {
-		String word = "Indiiaaii";
-		duplicatechar(word);
+		String word = "indiiaaii";
+		getDuplicate(word);
 
 	}
 
-	public static void duplicatechar(String word) {
-		char[] ch = word.toCharArray();
+	public static void getDuplicate(String word) {
 		Map<Character, Integer> map = new HashMap<>();
+		char[] ch = word.toCharArray();
 		for (Character c : ch) {
 			if (map.containsKey(c)) {
 				map.put(c, map.get(c) + 1);
@@ -22,7 +22,7 @@ public class RepeatedCharCount {
 				map.put(c, 1);
 			}
 		}
-		System.out.println(map);
+		//System.out.println(map);
 		// Iterate through HashMap to print all duplicate characters of String
 		Set<Map.Entry<Character, Integer>> entrySet = map.entrySet();
 		System.out.printf("List of duplicate characters in String '%s' %n", word);
