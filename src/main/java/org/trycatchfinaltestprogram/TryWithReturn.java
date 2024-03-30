@@ -1,4 +1,4 @@
-package org.TryCatchFinalTestProgram;
+package org.trycatchfinaltestprogram;
 
 public class TryWithReturn {
 

@@ -30,11 +30,172 @@
         <apache-commons.version>3.12.0</apache-commons.version>
         <resilence4j-reactor.version>2.0.2</resilence4j-reactor.version>
         <resilence4j-spring-boot2.version>2.0.2</resilence4j-spring-boot2.version>
-
+        <starati-af-turn-utils-client-api-version>2.0.22</starati-af-turn-utils-client-api-version>
+        <micrometer>1.10.4</micrometer>
+        <apache-commons-lang-version>3.12.0</apache-commons-lang-version>
+        <reactor.adaptor.version>3.4.6</reactor.adaptor.version>
+        <spring-boot-version>3.0.5</spring-boot-version>
+        <springcontext-version>6.5.0</springcontext-version>
+        <netty-code-https2.version>4.1.85.Final</netty-code-https2.version>
+        <reactor-netty.version>2.0.46.Final</reactor-netty.version>
+        <reactor-netty.version>1.1.0</reactor-netty.version>
+        <reactor-core.version>3.4.24</reactor-core.version>
+        <validation-api-version>2.0.1.Final</validation-api-version>
+        <resilience4j.version>1.18.26</resilience4j.version>
+        <mockito.core.version>1.18.26</mockito.core.version>
+        <mockito-inline.version>5.1.1</mockito-inline.version>
+        <mockito.junit-jupiter.version>5.1.1</mockito.junit-jupiter.version>
+        <awitility.version>4.1.1</awitility.version>
+        <jackson.annotation.version>2.14.2</jackson.annotation.version>
+        <log4j2.version>2.20.0</log4j2.version>
+        <mvn-compiler-plugin.version>3.11.0</mvn-compiler-plugin.version>
+        <maven-resource-plugin.version>3.1.0</maven-resource-plugin.version>
+        <mvn-jar-plugin.version>3.2.0</mvn-jar-plugin.version>
+        <mvn-release-plugin.version>3.0.0-M1</mvn-release-plugin.version>
+        <mvn-install-plugin.version>3.0.0-M1</mvn-install-plugin.version>
+        <maven-deployee-plugin-version>3.0.0-M1</maven-deployee-plugin-version>
+        <maven-site-plugin.version>3.9.0</maven-site-plugin.version>
+        <sonar-jacco-listener.version>3.2</sonar-jacco-listener.version>
+        <maven-surfier-plugin.version>3.0.0-M5</maven-surfier-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <jacco.version>0.8.7</jacco.version>
+        <jacco.unittest.destfile>${project.build.directory}/covarage-report/jacco-ut.exe</jacco.unittest.destfile>
+        <sonar-jacco.reportpath>${jacco.unittest.destfile}</sonar-jacco.reportpath>
+        <jacco.unittest.reportpath>${project.build.director}/coverage-reports/jacco.it.exe</jacco.unittest.reportpath>
+        <sonar.jacco.itreportpath>${jacco.integration.test.destfile}</sonar.jacco.itreportpath>
+        <sonar.exclusion>**/config/**/*,**/constants/**/*,**/controller/**/*,**/valueobject/**/*,**/*config.java,**
+            /cpmmand/**,**/model/**,*
+        </sonar.exclusion>
+        <jacco.aggregate.destfile>${project.build.directory}/covarage-report/aggregate.exec</jacco.aggregate.destfile>
+        <sonar.coverage.jacco.xmlreportpath>${jacco.aggregate.reportpath}/jacco.xml</sonar.coverage.jacco.xmlreportpath>
+        <jacco.percentage.line>1.0</jacco.percentage.line>
+        <git-commit-id-plugin.version>4.0 0</git-commit-id-plugin.version>
+        <lombok-maven-plugin-version>1.18.20.0</lombok-maven-plugin-version>
+        <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
+        <checkstyle.version>8.8</checkstyle.version>
+        <disable.checkstyle.validation>false</disable.checkstyle.validation>
+        <azure.spring.boot.starter.cosmos.version>4.6.0</azure.spring.boot.starter.cosmos.version>
+        <spring-statemachine.version>3.2.0</spring-statemachine.version>
+        <hibernate-validator-version>6.2.3.Final</hibernate-validator-version>
+        <spring-security-oauth2.version>5.8.1</spring-security-oauth2.version>
+        <swagger.maven.plugin.version>5.3.1.8</swagger.maven.plugin.version>
+        <spring-box-boot-starter.version>3.0.0</spring-box-boot-starter.version>
+        <swagger.core.version>1.6.4</swagger.core.version>
+        <jaxb.api.version>2.3.1</jaxb.api.version>
+        <slf4j-api-version>2.0.6</slf4j-api-version>
+        <spring.context.version>6.0.5</spring.context.version>
+        <jaxb.runtime.version>3.0.0</jaxb.runtime.version>
+        <jakarta.xml.bind.api.version>4.0.0</jakarta.xml.bind.api.version>
+        <activation.version>1.1</activation.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- New code -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j.pom</artifactId>
+                <version>${slf4j-api-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-web</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-webmvc</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework-boot</groupId>
+                        <artifactId>spring-boot</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.context.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring.test</artifactId>
+                <version>${spring.context.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.projectreactor.addons</groupId>
+                <artifactId>reactor-adaptor</artifactId>
+                <version>${reactor-adaptor.version}</version>
+
+            </dependency>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-test</artifactId>
+                <version>${reactor-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>springcontext</artifactId>
+                <version>${spring.context.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.context.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework-boot</groupId>
+                <artifactId>spring-boot-starter-webflux</artifactId>
+                <version>${spring.boot.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-webflux</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-strator.logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webflux</artifactId>
+                <version>${spring.context.version}</version>
+            </dependency>
+
+
+            <!-- End of New code -->
+
+            <!-- old code -->
+
             <dependency>
                 <groupId>io.projectreactor</groupId>
                 <artifactId>reactor-bom</artifactId>
@@ -48,26 +209,18 @@
                 <artifactId>log4j-api</artifactId>
                 <version>${log4j.version}</version>
                 <type>pom</type>
-
             </dependency>
-
-
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <scope>import</scope>
                 <artifactId>log4j-api</artifactId>
                 <version>${log4j.version}</version>
                 <type>pom</type>
-
             </dependency>
-
-
-
-
         </dependencies>
+
+        <!-- end of old code -->
     </dependencyManagement>
-
-
 
 
     <dependencies>
@@ -127,8 +280,6 @@
     </dependencies>
 
 
-
-
     <build>
         <plugins>
             <plugin>
@@ -139,9 +290,6 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-
-
-
 
 
         </plugins>
