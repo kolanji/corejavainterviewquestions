@@ -10,7 +10,7 @@ public class DuplicatesCharacter {
     public static void main(String[] args) {
 
         String duplicate = "kooolllaanjii";
-        /* All duplicate Element */
+        /* All Duplicate Element */
         List<String> results = Arrays.stream(duplicate.split(""))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet()
@@ -21,7 +21,7 @@ public class DuplicatesCharacter {
 
         System.out.println("Duplicate Values " + results);
 
-        /* All unique Element */
+        /* All Unique Element */
         List<String> uniqueElement = Arrays.stream(duplicate.split(""))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet()

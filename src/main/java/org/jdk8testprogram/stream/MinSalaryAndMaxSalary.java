@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class MinSalaryAndMaxSalary {
     public static void main(String[] args) {
-        List<Employee> employee = Database.getEmployeeDetails()
+        List<Employee> minimumSalary = Database.getEmployeeDetails()
                 .stream()
                 .filter(salary -> salary.getSalary() > 50000)
                 .collect(Collectors.toList());
@@ -20,7 +20,7 @@ public class MinSalaryAndMaxSalary {
                 .collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
 
         //max salary
-        System.out.println("maxSalary"+maxSalary.get());
+        System.out.println("Maximum Salary"+maxSalary.get());
 
         //second max
         Optional<Employee> secondMaxSalary = Database.getEmployeeDetails().stream()
@@ -28,7 +28,7 @@ public class MinSalaryAndMaxSalary {
                         .reversed())
                 .skip(1)
                 .findFirst();
-        System.out.println("SECOND maxSalary" + secondMaxSalary.get());
+        System.out.println("Second MaxSalary" + secondMaxSalary.get());
 
         // System.out.println(employee);
     }
