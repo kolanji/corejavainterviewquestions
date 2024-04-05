@@ -11,7 +11,7 @@ public class CountTest {
 		// co=new CountTest(); //The final local variable co cannot be assigned. It must
 		// be blank and not using a compound assignment
 
-		System.out.println("HASHCODE::"+co.hashCode());
+		System.out.println("HashCode::"+co.hashCode());
 		// System.out.println(co1.hashCode());
 		List list = new ArrayList();
 		list.add(21);
