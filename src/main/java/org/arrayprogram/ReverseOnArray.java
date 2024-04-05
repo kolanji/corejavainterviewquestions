@@ -1,4 +1,4 @@
-package org.arraytestprogram;
+package org.arrayprogram;
 
 import java.util.Arrays;
 import java.util.Collections;

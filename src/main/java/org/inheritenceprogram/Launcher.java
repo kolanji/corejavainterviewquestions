@@ -1,4 +1,4 @@
-package org.inheritencetestprogram;
+package org.inheritenceprogram;
 
 public class Launcher implements Square,Cube {
 

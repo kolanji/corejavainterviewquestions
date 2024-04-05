@@ -1,4 +1,4 @@
-package org.arraytestprogram;
+package org.arrayprogram;
 import java.util.Arrays;
 public class DuplicateNumberArray {
 	// private static final Logger logger =

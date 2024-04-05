@@ -1,4 +1,4 @@
-package org.arraytestprogram;
+package org.arrayprogram;
 
 public interface Calculator {
     // void switchOn();

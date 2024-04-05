@@ -1,4 +1,4 @@
-package org.inheritencetestprogram;
+package org.inheritenceprogram;
 
 public interface Cube {
 	public default void cal(int x) {

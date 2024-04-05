@@ -1,4 +1,4 @@
-package org.arraytestprogram;
+package org.arrayprogram;
 
 public class IntToArrayJdk8 {
     public static void main(String[] args) {

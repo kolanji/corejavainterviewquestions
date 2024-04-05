@@ -1,4 +1,4 @@
-package org.arraytestprogram;
+package org.arrayprogram;
 
 import java.util.HashSet;
 import java.util.Set;

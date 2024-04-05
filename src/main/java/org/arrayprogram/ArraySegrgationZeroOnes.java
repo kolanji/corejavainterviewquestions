@@ -1,4 +1,4 @@
-package org.arraytestprogram;
+package org.arrayprogram;
 
 public class ArraySegrgationZeroOnes {
     static void getSegregate(int arr[], int n) {

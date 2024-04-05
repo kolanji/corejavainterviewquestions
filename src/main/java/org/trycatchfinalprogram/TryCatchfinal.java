@@ -1,4 +1,4 @@
-package org.trycatchfinaltestprogram;
+package org.trycatchfinalprogram;
 
 public class TryCatchfinal {
     private final int i = 0;

@@ -1,4 +1,4 @@
-package org.enumtest;
+package org.enumprogram;
 
 import org.concurrencyapi.Declare;
 
