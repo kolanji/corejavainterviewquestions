@@ -1,4 +1,4 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
 public class DeadLock_Test {
 	static Thread mt;

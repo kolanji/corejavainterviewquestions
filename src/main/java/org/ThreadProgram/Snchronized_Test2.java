@@ -1,4 +1,4 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
 public class Snchronized_Test2 {
 	public static void main(String[] args) {

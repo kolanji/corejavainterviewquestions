@@ -1,4 +1,4 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
 import java.util.ArrayList;
 import java.util.List;

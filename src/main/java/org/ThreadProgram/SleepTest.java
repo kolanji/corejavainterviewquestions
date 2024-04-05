@@ -1,4 +1,4 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
 public class SleepTest {
 public static void main(String[] args) throws InterruptedException{

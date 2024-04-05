@@ -1,19 +1,19 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
 import java.util.concurrent.CountDownLatch;
 
-public class CountDownDevB extends Thread {
-	
+public class CountDownDevA extends Thread {
+
 	private CountDownLatch latch;
 
-	public CountDownDevB(CountDownLatch count, String name) {
+	public CountDownDevA(CountDownLatch count, String name) {
 		super(name);
 		this.latch = count;
 
 	}
 
 	public void run() {
-		System.out.println("CountDownDEVB Task " + Thread.currentThread().getName());
+		System.out.println("CountDownDEVA " + Thread.currentThread().getName());
 
 		try {
 			Thread.sleep(3000);

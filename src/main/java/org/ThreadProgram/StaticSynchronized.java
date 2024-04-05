@@ -1,4 +1,4 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
 public class StaticSynchronized {
     public static synchronized void wish(String name) {

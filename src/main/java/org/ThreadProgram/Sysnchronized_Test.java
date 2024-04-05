@@ -1,4 +1,4 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
 public class Sysnchronized_Test  {
 public static void main(String[] args) {

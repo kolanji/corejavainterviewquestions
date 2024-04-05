@@ -1,29 +1,33 @@
-package org.ThreadTestProgram;
+package org.ThreadProgram;
 
-public class Join_Test_ extends Thread {
-
+public class JoinCallMain extends Thread {
+	
+	static Thread th;
+	@Override
 	public void run() {
+		try {
+			th.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		for (int i = 0; i < 10; i++) {
 
 			System.out.println("run -" + Thread.currentThread().getName());
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 		}
 	}
 	public static void main(String[] args) throws InterruptedException {
 
-		Join_Test_ tt = new Join_Test_();
+		JoinCallMain tt = new JoinCallMain();
+		th=Thread.currentThread();
 		tt.setName("Sub1");
 		tt.start();
-        tt.join();
+        
 		for (int i = 0; i < 10; i++) {
 
 			System.out.println("Main -" + Thread.currentThread().getName());
-			Thread.sleep(3000);
+			//Thread.sleep(3000);
 		}
 	}
 }
