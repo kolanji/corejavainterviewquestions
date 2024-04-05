@@ -13,6 +13,7 @@ import java.util.Arrays;
 
  */
 public class DuplicateZeros {
+
     public static  void duplicateZeros(int[] arr) {
 
         // We need to have memo to keep all integers that should be inserted

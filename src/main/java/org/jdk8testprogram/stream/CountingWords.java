@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class CountingWords {
     public static void main(String[] args) {
 
-        String str = "welcome to code decode";
+        String str = "welcome welcome to code decode";
 
         //Methods1
         List<String> list = Arrays.asList(str.split(" "));

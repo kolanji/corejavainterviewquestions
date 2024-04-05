@@ -10,7 +10,9 @@ public class ArraySECON {
         Integer second = Arrays.stream(arr)
                 .boxed()
                 .sorted()
-                .skip(1).findFirst().get();
+                .skip(1)
+                .findFirst()
+                .get();
         System.out.println(second);
     }
 }

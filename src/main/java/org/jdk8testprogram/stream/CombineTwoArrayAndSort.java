@@ -10,20 +10,19 @@ public class CombineTwoArrayAndSort {
         String[] array1 = {"1", "3", "4", "4"};
         String[] array2 = {"2", "5", "5"};
 
-        /* combine two different arrays and sort */
+        /* Combine two different arrays and sort */
         String[] mergedArray = Stream.concat(Arrays.stream(array1), Arrays.stream(array2))
                 .sorted()
                 .toArray(String[]::new);
         System.out.println("Merged Two Array with Sorting" + Arrays.toString(mergedArray));
 
         /*
-         two different arrays and sorted  and distinct
+         Two different arrays and sorted and distinct
          */
         String[] mergedDistinct = Stream.concat(Arrays.stream(array1), Arrays.stream(array2))
                 .sorted().distinct()
                 .toArray(String[]::new);
         System.out.println("Merged with distinct" + Arrays.toString(mergedDistinct));
-
 
         /*
         Integer array sorting

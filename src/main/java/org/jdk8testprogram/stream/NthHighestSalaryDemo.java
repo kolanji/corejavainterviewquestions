@@ -37,14 +37,16 @@ public class NthHighestSalaryDemo {
 
     }
 
-    public static Map.Entry<String, Integer> getNthHighestSalary(int num, Map<String, Integer> map) {
+    public static Map.Entry<String, Integer>
+                     getNthHighestSalary(int num, Map<String, Integer> map) {
         return map.entrySet().stream()
                 .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
                 .collect(Collectors.toList())
                 .get(num - 1);
     }
 
-    public static Map.Entry<Integer, List<String>> getDynamicNthHighestSalary(int num, Map<String, Integer> map) {
+    public static Map.Entry<Integer, List<String>>
+               getDynamicNthHighestSalary(int num, Map<String, Integer> map) {
         return map.entrySet()
                 .stream()
                 .collect(Collectors.groupingBy(Map.Entry::getValue,

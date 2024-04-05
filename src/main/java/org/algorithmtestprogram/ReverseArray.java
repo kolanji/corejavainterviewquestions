@@ -9,12 +9,12 @@ public class ReverseArray {
         Arrays.stream(reverseArr).forEach(values -> System.out.println(values));
     }
 
-    public static void reverseArray(int reverse[], int start, int end) {
-        System.out.println("Start Values::" + start + "End Values ::" + end);
+    public static void reverseArray(int arr[], int start, int end) {
+       // System.out.println("Start Values::" + start + "End Values ::" + end);
         while (start < end) {
-            int temp = reverse[start];
-            reverse[start] = reverse[end];
-            reverse[end] = temp;
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
             start++;
             end--;
 

@@ -2,7 +2,7 @@ package org.leetCode;
 /**
  * Not Working
  */
-public class shuffledString {
+public class ShuffledString {
 
 
     public static String restoreString(String s, int[] indices) {

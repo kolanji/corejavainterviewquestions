@@ -3,9 +3,8 @@ package org.stringtestprogram;
 public class StringPalindrome {
 
     public static void main(String[] args) {
-        String inputStr = "hi";
+        String inputStr = "202";
         String result = reverse(inputStr);
-
         if (inputStr.equals(result)) {
             System.out.println("Yes "+inputStr+" is a Palindrome  : " + result);
         } else {
