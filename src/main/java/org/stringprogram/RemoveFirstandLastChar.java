@@ -1,4 +1,4 @@
-package org.stringtestprogram;
+package org.stringprogram;
 
 public class RemoveFirstandLastChar {
 	public static void main(String args[]) {

@@ -1,4 +1,4 @@
-package org.stringtestprogram;
+package org.stringprogram;
 
 public class StringPermutation {
     public static void main(String args[]) {

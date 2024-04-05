@@ -1,4 +1,4 @@
-package org.stringtestprogram;
+package org.stringprogram;
 
 public class Alternativecharacterreverse {
 	public static void main(String[] args) throws java.lang.Exception {

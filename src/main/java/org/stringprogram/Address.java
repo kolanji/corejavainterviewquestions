@@ -1,4 +1,4 @@
-package org.stringtestprogram;
+package org.stringprogram;
 //mutable class
 public class Address {
 

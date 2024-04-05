@@ -1,4 +1,4 @@
-package org.stringtestprogram;
+package org.stringprogram;
 
 public class StringReverseUsingRecursion {
 	 /* Function to print reverse of the passed string */

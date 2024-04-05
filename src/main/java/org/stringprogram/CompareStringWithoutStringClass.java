@@ -1,4 +1,4 @@
-package org.stringtestprogram;
+package org.stringprogram;
 
 public class CompareStringWithoutStringClass {
     // This method compares two strings

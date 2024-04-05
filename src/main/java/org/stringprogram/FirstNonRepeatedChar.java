@@ -1,4 +1,4 @@
-package org.stringtestprogram;
+package org.stringprogram;
 import java.util.*;
 import java.util.Map.Entry;
 
