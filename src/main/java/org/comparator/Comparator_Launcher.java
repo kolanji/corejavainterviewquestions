@@ -1,13 +1,20 @@
 package org.comparator;
 
+import org.common.Database;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Comparator_Launcher {
 
     public static void main(String[] args) {
+
+        Database.getEmployeeDetails().stream().filter(s -> s.getSalary() <= s.getSalary())
+                .collect(Collectors.groupingBy(s -> s.getId(),
+                        Collectors.maxBy(Comparator.comparing(s -> s.getGrade()))));
 
 
         List<Student> l = getEmployees();

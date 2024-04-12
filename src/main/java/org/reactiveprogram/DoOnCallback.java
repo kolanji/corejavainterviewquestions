@@ -3,7 +3,7 @@ package org.reactiveprogram;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-public class doOnCallback {
+public class DoOnCallback {
     public static void main(String[] args) {
         Flux.just("data1", "data2", "data3")
                 .doOnSubscribe(subscription -> System.out.println("Subscription: " + subscription))

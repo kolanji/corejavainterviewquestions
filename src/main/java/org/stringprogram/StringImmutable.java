@@ -1,6 +1,6 @@
 package org.stringprogram;
 
-public class Stringimmutable {
+public class StringImmutable {
     public static void main(String[] args) {
         String st = new String("kolanji");
         String st2 = "nathan";

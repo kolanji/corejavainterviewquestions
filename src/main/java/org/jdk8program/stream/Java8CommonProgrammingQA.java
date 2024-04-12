@@ -95,7 +95,8 @@ public class Java8CommonProgrammingQA {
         Student student = studentList.stream()
                 .sorted(Comparator.comparing(Student::getRank))
                 .skip(2)
-                .findFirst().get();
+                .findFirst()
+                .get();
         System.out.println(student);
 
     }

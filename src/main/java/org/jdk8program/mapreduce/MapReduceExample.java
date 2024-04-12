@@ -1,5 +1,7 @@
 package org.jdk8program.mapreduce;
 
+import org.common.Database;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -10,53 +12,66 @@ public class MapReduceExample {
         List<Integer> numbers = Arrays.asList(3, 7, 8, 1, 5, 9);
 
         List<String> words = Arrays.asList("corejava", "spring", "hibernate");
-
+// old method
         int sum = 0;
         for (int no : numbers) {
             sum = sum + no;
         }
-        System.out.println(sum);
+        System.out.println("Old method>> " + sum);
 
-        int sum1 = numbers.stream().mapToInt(i -> i).sum();
-        System.out.println(sum1);
+        //using stream
+        int sum1 = numbers.stream()
+                .mapToInt(i -> i).sum();
+        System.out.println("Sum1>>" + sum1);
+        //using reduce
 
-        Integer reduceSum = numbers.stream().reduce(0, (a, b) -> a + b);
-        System.out.println(reduceSum);
+        Integer reduceSum = numbers.stream()
+                .reduce(0, (a, b) -> a + b);
+        System.out.println("ReduceSum>> " + reduceSum);
 
-        Optional<Integer> reduceSumWithMethodReference = numbers.stream().reduce(Integer::sum);
-        System.out.println(reduceSumWithMethodReference.get());
+        Optional<Integer> reduceSumWithMethodReference = numbers.stream()
+                .reduce(Integer::sum);
+        System.out.println("ReduceSumWithMethodReference>>" + reduceSumWithMethodReference.get());
 
-        Integer mulResult = numbers.stream().reduce(1, (a, b) -> a * b);
-        System.out.println(mulResult);
+        Integer mulResult = numbers.stream()
+                .reduce(1, (a, b) -> a * b);
+        System.out.println("MulResult>>" + mulResult);
 
-        Integer maxvalue = numbers.stream().reduce(0, (a, b) -> a > b ? a : b);
-        System.out.println(maxvalue);
+        Integer maxvalue = numbers.stream()
+                .reduce(0, (a, b) -> a > b ? a : b);
+        System.out.println("Maxvalue>>" + maxvalue);
 
-        Integer maxvalueWithMethodReference = numbers.stream().reduce(Integer::max).get();
-        System.out.println(maxvalueWithMethodReference);
-
-
-        String longestString = words.stream()
-                .reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2)
+        Integer maxvalueWithMethodReference = numbers.stream()
+                .reduce(Integer::max)
                 .get();
-        System.out.println(longestString);
+        System.out.println("Max Value With Method Reference>>" + maxvalueWithMethodReference);
+
+        // find the longest string
+        String longestString = words.stream()
+                .reduce((word1, word2) -> word1.length() > word2.length() ?
+                        word1 : word2)
+                .get();
+        System.out.println("Longest String>>" + longestString);
 
         //get employee whose grade A
         //get salary
-        double avgSalary = org.common.Database.getEmployeeDetails().stream()
+        double avgSalary = Database.getEmployeeDetails()
+                .stream()
                 .filter(employee -> employee.getGrade().equalsIgnoreCase("A"))
                 .map(employee -> employee.getSalary())
                 .mapToDouble(i -> i)
-                .average().getAsDouble();
+                .average()
+                .getAsDouble();
 
-        System.out.println(avgSalary);
+        System.out.println("Avg Salary>>" + avgSalary);
 
-        double sumSalary = org.common.Database.getEmployeeDetails().stream()
+        //sum of salary for a grade employee
+        double sumSalary = Database.getEmployeeDetails().stream()
                 .filter(employee -> employee.getGrade().equalsIgnoreCase("A"))
                 .map(employee -> employee.getSalary())
                 .mapToDouble(i -> i)
                 .sum();
-        System.out.println(sumSalary);
+        System.out.println("Sum Salary>>" + sumSalary);
     }
 
 

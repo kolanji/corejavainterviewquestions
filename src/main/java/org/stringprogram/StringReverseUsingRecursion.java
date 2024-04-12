@@ -16,7 +16,7 @@ public class StringReverseUsingRecursion {
     /* Driver program to test above function */
     public static void main(String[] args)
     {
-        String str = "Geeks for Geeks";
+        String str = "java in";
         StringReverseUsingRecursion obj = new StringReverseUsingRecursion();
         obj.reverse(str);
     }   

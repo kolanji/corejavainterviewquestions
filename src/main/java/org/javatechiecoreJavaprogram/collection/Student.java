@@ -1,9 +1,6 @@
 package org.javatechiecoreJavaprogram.collection;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Student implements Comparable<Student> {
 
@@ -78,6 +75,7 @@ public class Student implements Comparable<Student> {
         students.add(s3);
         students.add(s4);
         students.add(s5);
+
         Collections.sort(students, new IdComparator());
         System.out.println(students);
 

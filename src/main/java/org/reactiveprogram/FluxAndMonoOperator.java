@@ -22,7 +22,8 @@ public class FluxAndMonoOperator {
                 .subscribe(System.out::println);
 
         //Using FlatMap
-        Flux.fromArray(new String[]{"kolanji", "Rathna", "velMurugan", "Naidu"})
+         String[] array={"kolanji", "Rathna", "velMurugan", "Naidu"};
+        Flux.fromArray(array)
                 .flatMap(FluxAndMonoOperator::getValues)
                 .subscribe(System.out::println);
     }

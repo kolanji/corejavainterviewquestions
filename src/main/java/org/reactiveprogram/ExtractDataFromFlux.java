@@ -11,6 +11,7 @@ public class ExtractDataFromFlux {
         flux.subscribe(System.out::println);
 
         //OnNext
-        flux.doOnNext(System.out::println).subscribe();
+        flux.doOnNext(System.out::println)
+                .subscribe();
     }
 }
