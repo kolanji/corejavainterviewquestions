@@ -12,6 +12,8 @@ public class RepeatedCharCount {
 
 	}
 
+
+
 	public static void getDuplicate(String word) {
 		Map<Character, Integer> map = new HashMap<>();
 		char[] ch = word.toCharArray();

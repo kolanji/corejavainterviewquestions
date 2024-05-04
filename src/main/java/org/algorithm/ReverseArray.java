@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class ReverseArray {
     public static void main(String[] args) {
+        for(int i=0;i>5;){
+            System.out.println("i"+i);
+
+        }
         int reverseArr[] = {2, 3, 4, 5, 6, 7, 8, 9};
         ReverseArray.reverseArray(reverseArr, 0, reverseArr.length - 1);
         Arrays.stream(reverseArr).forEach(values -> System.out.println(values));

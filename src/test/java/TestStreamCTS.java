@@ -8,28 +8,28 @@ public class TestStreamCTS {
 
     public static void main(String[] args) {
 
-        List list = new ArrayList();
+       /* List list = new ArrayList();
         list.stream()
-                .sorted(Comparator.comparing(Employee.getsalary==Employee.getsalary)
+                .sorted((e1,e2)->e1.getsalary==Employee.getsalary)
                         .thenComparing(Employee::getAge))
                 .collect(Collectors.toList());
-
+*/
     }
 
     class TestException extends Exception {
 
         public TestException(String exception){
-            super(exception)
+            super(exception);
         }
     }
 
-    @RestControllerAdvice
+    /*@RestControllerAdvice
     class GlobalException implements  {
 
         @ExceptionHandler
         public MethodDoesnotException methodDoesnotException(){
 
-        }
+        }*/
 
     }
 

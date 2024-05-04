@@ -15,12 +15,12 @@ public class MinSalaryAndMaxSalary {
                 .filter(salary -> salary.getSalary() > 50000)
                 .collect(Collectors.toList());
         System.out.println("Minimum Salary" + minimumSalary);
-
+        //max salary
         Optional<Employee> maxSalary = Database.getEmployeeDetails()
                 .stream()
                 .collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
 
-        //max salary
+
         System.out.println("Maximum Salary" + maxSalary.get());
 
         //second max

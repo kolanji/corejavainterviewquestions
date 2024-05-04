@@ -31,16 +31,17 @@ public class MapReduceExample {
 
         Optional<Integer> reduceSumWithMethodReference = numbers.stream()
                 .reduce(Integer::sum);
-        System.out.println("ReduceSumWithMethodReference>>" + reduceSumWithMethodReference.get());
+        System.out.println("Reduce Sum With Method Reference>>" + reduceSumWithMethodReference.get());
 
         Integer mulResult = numbers.stream()
                 .reduce(1, (a, b) -> a * b);
-        System.out.println("MulResult>>" + mulResult);
+        System.out.println("Mul Result>>" + mulResult);
 
+        //find the max values using reduce
         Integer maxvalue = numbers.stream()
                 .reduce(0, (a, b) -> a > b ? a : b);
         System.out.println("Maxvalue>>" + maxvalue);
-
+        //find the max values
         Integer maxvalueWithMethodReference = numbers.stream()
                 .reduce(Integer::max)
                 .get();

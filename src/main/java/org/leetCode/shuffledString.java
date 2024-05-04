@@ -3,19 +3,13 @@ package org.leetCode;
  * Not Working
  */
 public class ShuffledString {
-
-
     public static String restoreString(String s, int[] indices) {
         String output = "";
         for (int j = 0; j < indices.length; j++) {
-
             for (int i = 0; i < s.length(); i++) {
-
                 output = "" + s;
-
             }
         }
-
         System.out.print("Output" + output);
         return output;
     }

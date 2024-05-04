@@ -7,7 +7,18 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Java8CommonProgrammingQA {
+
+    int x =4;
+    static{
+        int y=7;
+    }
     public static void main(String[] args) {
+int x=5;
+        {
+            int y=6;
+            System.out.println(x +"" +y);
+        }
+
         List<Student> studentList = Stream.of(
                         new Student(1, "Rohit", 30, "Male", "Mechanical Engineering", "Mumbai", 122, Arrays.asList("+912632632782", "+1673434729929")),
                         new Student(2, "Pulkit", 56, "Male", "Computer Engineering", "Delhi", 67, Arrays.asList("+912632632762", "+1673434723929")),
@@ -88,7 +99,7 @@ public class Java8CommonProgrammingQA {
         Map<String, Optional<Student>> stdMap = studentList.stream()
                 .collect(Collectors.groupingBy(Student::getDept,
                         Collectors.minBy(Comparator.comparing(Student::getRank))));
-        // System.out.println(stdMap);
+         System.out.println("Higheste rank "+stdMap);
 
         //9 .Find the student who has second rank
 
