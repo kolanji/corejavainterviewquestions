@@ -2,9 +2,9 @@ package org.solidprinciple.dip;
 
 public class ShoppingMall {
 
-    private com.javatechie.solid.dip.BankCard bankCard;
+    private BankCard bankCard;
 
-    public ShoppingMall(com.javatechie.solid.dip.BankCard bankCard) {
+    public ShoppingMall(BankCard bankCard) {
         this.bankCard = bankCard;
     }
 
@@ -16,7 +16,7 @@ public class ShoppingMall {
        // DebitCard debitCard=new DebitCard();
        // CreditCard creditCard=new CreditCard();
 
-        com.javatechie.solid.dip.BankCard bankCard=new CreditCard();
+        BankCard bankCard=new CreditCard();
         ShoppingMall shoppingMall=new ShoppingMall(bankCard);
         shoppingMall.doPurchaseSomething(5000);
     }
