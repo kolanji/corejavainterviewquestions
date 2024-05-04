@@ -1,6 +1,6 @@
-package com.javatechie.solid.ocp;
+package org.solidprinciple.ocp;
 
-public class MobileNotificationService implements Notificationservice {
+public class MobileNotificationService implements com.javatechie.solid.ocp.Notificationservice {
     public void sendOTP(String medium) {
         //write the logic to send otp to mobile
         //twillo api

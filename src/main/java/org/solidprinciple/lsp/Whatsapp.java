@@ -1,6 +1,6 @@
 package com.javatechie.solid.lsp;
 
-public class Whatsapp extends SocialMedia {
+public class Whatsapp extends com.javatechie.solid.lsp.SocialMedia {
     public void chatWithFriend() {
 
     }

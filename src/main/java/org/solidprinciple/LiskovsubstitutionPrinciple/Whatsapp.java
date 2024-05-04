@@ -1,6 +1,6 @@
 package com.javatechie.solid.LiskovsubstitutionPrinciple;
 
-public class Whatsapp extends SocialMedia {
+public class Whatsapp extends com.javatechie.solid.LiskovsubstitutionPrinciple.SocialMedia {
     public void chatWithFriend() {
 
     }

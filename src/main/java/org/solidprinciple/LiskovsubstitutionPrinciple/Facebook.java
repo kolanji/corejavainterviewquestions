@@ -1,6 +1,6 @@
-package com.javatechie.solid.LiskovsubstitutionPrinciple;
+package org.solidprinciple.LiskovsubstitutionPrinciple;
 
-public class Facebook extends SocialMedia {
+public class Facebook extends com.javatechie.solid.LiskovsubstitutionPrinciple.SocialMedia {
 
     public void chatWithFriend() {
 

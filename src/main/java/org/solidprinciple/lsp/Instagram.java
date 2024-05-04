@@ -1,6 +1,6 @@
 package com.javatechie.solid.lsp;
 
-public class Instagram extends SocialMedia {
+public class Instagram extends com.javatechie.solid.lsp.SocialMedia {
 
     public void chatWithFriend() {
 

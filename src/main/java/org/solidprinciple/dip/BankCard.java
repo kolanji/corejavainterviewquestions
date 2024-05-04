@@ -1,4 +1,4 @@
-package com.javatechie.solid.dip;
+package org.solidprinciple.dip;
 
 public interface BankCard {
 

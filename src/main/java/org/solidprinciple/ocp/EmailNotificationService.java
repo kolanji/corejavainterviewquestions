@@ -1,6 +1,6 @@
-package com.javatechie.solid.ocp;
+package org.solidprinciple.ocp;
 
-public class EmailNotificationService implements Notificationservice {
+public class EmailNotificationService implements com.javatechie.solid.ocp.Notificationservice {
     public void sendOTP(String medium) {
         //write logic to integrate with email api
 

@@ -1,6 +1,6 @@
-package com.javatechie.solid.ocp;
+package org.solidprinciple.ocp;
 
-public class WhatsAppNotificationService implements Notificationservice {
+public class WhatsAppNotificationService implements com.javatechie.solid.ocp.Notificationservice {
 
     public void sendOTP(String medium) {
         //logic to integrate whatsapp api

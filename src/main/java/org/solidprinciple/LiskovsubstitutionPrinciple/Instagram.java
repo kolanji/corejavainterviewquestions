@@ -1,6 +1,6 @@
-package com.javatechie.solid.LiskovsubstitutionPrinciple;
+package org.solidprinciple.LiskovsubstitutionPrinciple;
 
-public class Instagram extends SocialMedia {
+public class Instagram extends com.javatechie.solid.LiskovsubstitutionPrinciple.SocialMedia {
 
     public void chatWithFriend() {
 
